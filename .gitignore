@@ -1,0 +1,12 @@
+# Roland's copyrighted ROM data and anything derived from it: supply your own dumps, never commit them
+ctrl/
+dumps/
+*.bin
+*.lst
+baked/
+__pycache__/
+# MAME reference disassembler: sources are fetched and built by mame_ref/build.sh
+mame_ref/*
+!mame_ref/build.sh
+!mame_ref/emu.h
+!mame_ref/mame_dasm.cpp
