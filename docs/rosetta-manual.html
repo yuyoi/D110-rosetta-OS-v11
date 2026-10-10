@@ -50,12 +50,19 @@ li{margin:4px 0}
 .toc span{color:var(--accent);font:700 13px var(--display);margin-right:8px}
 a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 footer{margin-top:56px;padding-top:16px;border-top:4px solid var(--fg);font-size:13px;color:var(--muted)}
+
+/* Added: one-line "what it is" under each chapter bar, and the "try this" box */
+.whatis{margin:0 0 12px;max-width:68ch;font-size:17px;color:var(--muted)}
+.whatis b{color:var(--fg);font-family:var(--display);letter-spacing:.02em}
+.tip{border:1px solid var(--rule);border-left:4px solid var(--fg);background:var(--paper);padding:12px 16px;margin:16px 0;font-size:15px}
+.tip strong{font-family:var(--display);letter-spacing:.06em;text-transform:uppercase;font-size:12px;color:var(--accent);display:block;margin-bottom:4px}
 </style>
 
 <div class="wrap">
 <header class="cover">
   <div class="brand">Rosetta OS · for the Roland D-110</div>
   <h1>Owner's Manual</h1>
+  <p class="sub">Short words. Easy steps. Go and play.</p>
   <div class="lcdrow"><div class="lcd"> ROSETTA OS v12 
  D-110  by JSW  </div></div>
   <div class="rev">Revision v12 · by JunkSmithWizard (JSW) with Claude · not affiliated with Roland</div>
@@ -74,46 +81,50 @@ footer{margin-top:56px;padding-top:16px;border-top:4px solid var(--fg);font-size
 </header>
 
 <h2 id="products"><span class="n">1</span> About Rosetta</h2>
-<p>Rosetta started on the Roland U-110: put your own sounds where the factory sounds were. Now it does the D-110 too. A D-10 version is on the way.</p>
+<p>Rosetta began on the Roland U-110. There, you put your own sounds in the place where the factory sounds were. Now it does the same job on the D-110. A D-10 version is on the way.</p>
 <div class="products">
-  <div class="prod"><b>Rosetta ROM</b>Your own sounds in the synth.</div>
-  <div class="prod"><b>Rosetta OS</b>New stuff to play with. This manual.</div>
+  <div class="prod"><b>Rosetta ROM</b>Your own sounds, inside the synth.</div>
+  <div class="prod"><b>Rosetta OS</b>Extra things to play with. This manual.</div>
 </div>
 
 <h2 id="start"><span class="n">2</span> Before you start</h2>
 <div class="note"><strong>Install note</strong>Two chips. The OS chip is the same since v8, so an update only swaps the control chip. v12 boots and works on a real unit.</div>
-<p>Turn it on. You see the Rosetta screen, then the normal screen. Everything Roland made still works. Your Rosetta settings stay saved when you turn it off.</p>
+<p>Switch it on. First you see the Rosetta boot screen for a moment:</p>
+<div class="lcdrow"><div class="lcd"> ROSETTA OS v12 
+ D-110  by JSW  </div></div>
+<p>Then the normal D-110 screen comes up. Everything Roland made still works. Your Rosetta settings stay saved when you switch it off.</p>
+<div class="note"><strong>The menu is hidden</strong>The Rosetta menu does not show up on its own. Hold <span class="key">Enter</span>, then press <span class="key">Edit</span> to open it. See chapter 3.</div>
 
 <h2 id="quick"><span class="n">3</span> Quick screen &amp; knobs</h2>
-<p>Hold <span class="key">Enter</span>, press <span class="key">Edit</span>.</p>
+<p>Hold <span class="key">Enter</span>. Press <span class="key">Edit</span>.</p>
 <div class="lcdrow"><div class="lcd">Cut  64 Res 12P1
 Atk  20 Rel  45 </div></div>
 <div class="tbl"><table>
 <tr><th>Button</th><th>Does</th></tr>
-<tr><td><span class="key">Group ▲▼</span></td><td>Brighter / darker (cutoff). You hear it right away.</td></tr>
-<tr><td><span class="key">Bank ▲▼</span></td><td>More / less ring (resonance). You hear it right away.</td></tr>
-<tr><td><span class="key">Number ▲▼</span></td><td>Slower / faster start (attack). Next note.</td></tr>
-<tr><td><span class="key">Part ▲▼</span></td><td>Longer / shorter end (release). Next note.</td></tr>
+<tr><td><span class="key">Group ▲▼</span></td><td>Brighter or darker (cutoff). You hear it right away.</td></tr>
+<tr><td><span class="key">Bank ▲▼</span></td><td>More or less ring (resonance). You hear it right away.</td></tr>
+<tr><td><span class="key">Number ▲▼</span></td><td>Slower or faster start (attack). On the next note.</td></tr>
+<tr><td><span class="key">Part ▲▼</span></td><td>Longer or shorter end (release). On the next note.</td></tr>
 <tr><td><span class="key">Part</span></td><td>Next part, P1–P8</td></tr>
-<tr><td><span class="key">Edit</span></td><td>Rosetta menu</td></tr>
-<tr><td><span class="key">Exit</span></td><td>Back</td></tr>
+<tr><td><span class="key">Edit</span></td><td>Open the Rosetta menu</td></tr>
+<tr><td><span class="key">Exit</span></td><td>Go back</td></tr>
 </table></div>
 <p><b>Knobs over MIDI:</b> CC74 cutoff, CC71 resonance, CC73 attack, CC72 release.</p>
-<p class="muted">Cutoff and resonance only work on synth sounds, not samples (PCM).</p>
+<p class="muted">Cutoff and resonance only work on synth sounds. They do not work on samples (PCM).</p>
 
 <h2 id="menu"><span class="n">4</span> The menu</h2>
-<p>Quick screen, then <span class="key">Edit</span>. One line = one feature. A <b>&gt;</b> means it has more settings inside.</p>
+<p>Open the quick screen. Press <span class="key">Edit</span>. One line = one feature. A <b>&gt;</b> means the line has more settings inside.</p>
 <div class="lcdrow"><div class="lcd">Arp Mode       &gt;
 Up              </div><div class="lcd">Arp Rate        
 1/16            </div></div>
 <div class="tbl"><table>
 <tr><th>Button</th><th>Does</th></tr>
-<tr><td><span class="key">Group ▲▼</span></td><td>Next / previous line</td></tr>
+<tr><td><span class="key">Group ▲▼</span></td><td>Next or previous line</td></tr>
 <tr><td><span class="key">Bank ▲▼</span></td><td>Value +1 / −1</td></tr>
 <tr><td><span class="key">Number ▲▼</span></td><td>Value +10 / −10</td></tr>
 <tr><td><span class="key">Part</span></td><td>Which part</td></tr>
-<tr><td><span class="key">Edit</span></td><td>Go inside a <b>&gt;</b> line. Again = back out.</td></tr>
-<tr><td><span class="key">Exit</span></td><td>Back</td></tr>
+<tr><td><span class="key">Edit</span></td><td>Go inside a <b>&gt;</b> line. Press again to come back out.</td></tr>
+<tr><td><span class="key">Exit</span></td><td>Go back</td></tr>
 </table></div>
 <p class="muted"><b>Part</b> settings: All, or one part P1–P8.</p>
 
@@ -139,7 +150,7 @@ Up              </div><div class="lcd">Arp Rate
 <tr><td>Unison Voices &gt;</td><td>1–4</td><td>Stack the sound up to 4 times. Detune 0–99 = fatter.</td></tr>
 </table></div>
 <h3>Chord &gt;</h3>
-<p>One key = a whole chord.</p>
+<p>One key plays a whole chord.</p>
 <div class="tbl"><table>
 <tr><th>Item</th><th>Values</th></tr>
 <tr><td>Chord</td><td>Off, Octave, Fifth, 5th+Oct, Major, Minor, Sus4, Major7, Minor7, Dom7, Minor9, Dim, Learned, Scale, Scale 7</td></tr>
@@ -151,7 +162,7 @@ Up              </div><div class="lcd">Arp Rate
 <p class="muted">Scale = every key plays the right chord for that scale. Scale 7 = same with 4 notes.</p>
 
 <h2 id="mod"><span class="n">7</span> Mod Matrix</h2>
-<p>Connect something you do (wheel, pressure, how hard you hit) to something you hear. On / Off. 4 slots.</p>
+<p>Connect something you do (wheel, pressure, how hard you hit) to something you hear. On or Off. There are 4 slots.</p>
 <div class="tbl"><table>
 <tr><th>Item</th><th>Values</th></tr>
 <tr><td>Source</td><td>Off, ModWheel, AftTouch, Velocity, Key, LFO, S&amp;H, CC16, CC17</td></tr>
@@ -187,7 +198,7 @@ Up              </div><div class="lcd">Arp Rate
 <tr><td>Humanize Time / Vel</td><td>0–99</td><td>Less robotic</td></tr>
 </table></div>
 <h3>Seq</h3>
-<p>Record your own pattern, up to 32 steps. Set Arp Mode to Seq. The key you hold changes the key of the pattern.</p>
+<p>Record your own pattern. It goes up to 32 steps. Set Arp Mode to Seq. The key you hold sets the key of the pattern.</p>
 <div class="tbl"><table>
 <tr><th>Button</th><th>Does</th></tr>
 <tr><td><span class="key">Bank ▲</span></td><td>Step record: one key = one step. <span class="key">Number ▲</span> = rest, <span class="key">Number ▼</span> = tie.</td></tr>
@@ -200,7 +211,7 @@ Done 16/32      </div></div>
 <p class="muted">Seq Length: 1–32.</p>
 
 <h2 id="lab"><span class="n">9</span> Lab</h2>
-<p>Break the sound chip on purpose. Weird sounds. Some settings go silent. On / Off.</p>
+<p>Break the sound chip on purpose. You get odd sounds. Some settings go silent. On or Off.</p>
 <div class="tbl"><table>
 <tr><th>Item</th><th>Values</th><th>Does</th></tr>
 <tr><td>Lab Reso High</td><td>Off, 0–7</td><td>7 = way more resonance than normal</td></tr>
@@ -211,7 +222,7 @@ Done 16/32      </div></div>
 <tr><td>Lab Part</td><td>All, P1–P8</td><td></td></tr>
 </table></div>
 <h3>Lab Motion</h3>
-<p>Changes the Lab value by itself. Hold one key, hear it morph.</p>
+<p>This one moves the Lab value by itself. Hold one key and hear it change shape.</p>
 <div class="tbl"><table>
 <tr><th>Item</th><th>Values</th></tr>
 <tr><td>Motion</td><td>Off, Up, Down, Ping, Random</td></tr>
@@ -225,7 +236,7 @@ Done 16/32      </div></div>
 <h2 id="info"><span class="n">10</span> Info &amp; help</h2>
 <div class="lcdrow"><div class="lcd">Info            
 Mem oooo P01 v12</div></div>
-<p>o = memory OK. X = problem. Then the part and the version.</p>
+<p>o = memory OK. X = problem. Then you see the part and the version.</p>
 <div class="tbl"><table>
 <tr><th>Problem</th><th>Fix</th></tr>
 <tr><td>Screen says “D-110 ROSETTA”, menu does nothing</td><td>Control chip not found. Check the install.</td></tr>
