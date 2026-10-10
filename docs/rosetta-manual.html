@@ -54,188 +54,187 @@ footer{margin-top:56px;padding-top:16px;border-top:4px solid var(--fg);font-size
 
 <div class="wrap">
 <header class="cover">
-  <div class="brand">Rosetta OS · for the D-110 Multi Timbral Sound Module</div>
+  <div class="brand">Rosetta OS · for the Roland D-110</div>
   <h1>Owner's Manual</h1>
-  <p class="sub">New performance features for the LA synthesis engine</p>
-  <div class="lcdrow"><div class="lcd"> ROSETTA OS v12
+  <div class="lcdrow"><div class="lcd"> ROSETTA OS v12 
  D-110  by JSW  </div></div>
   <div class="rev">Revision v12 · by JunkSmithWizard (JSW) with Claude · not affiliated with Roland</div>
   <ul class="toc">
     <li><a href="#products"><span>1</span>About Rosetta</a></li>
     <li><a href="#start"><span>2</span>Before you start</a></li>
-    <li><a href="#quick"><span>3</span>Quick screen &amp; CC knobs</a></li>
-    <li><a href="#menu"><span>4</span>The Rosetta menu</a></li>
+    <li><a href="#quick"><span>3</span>Quick screen &amp; knobs</a></li>
+    <li><a href="#menu"><span>4</span>The menu</a></li>
     <li><a href="#wave"><span>5</span>Wave</a></li>
     <li><a href="#voice"><span>6</span>Random, pitch &amp; voice</a></li>
     <li><a href="#mod"><span>7</span>Mod Matrix</a></li>
-    <li><a href="#arp"><span>8</span>Arpeggiator &amp; sequencer</a></li>
+    <li><a href="#arp"><span>8</span>Arp &amp; sequencer</a></li>
     <li><a href="#lab"><span>9</span>Lab</a></li>
-    <li><a href="#info"><span>10</span>Info &amp; troubleshooting</a></li>
+    <li><a href="#info"><span>10</span>Info &amp; help</a></li>
   </ul>
 </header>
 
 <h2 id="products"><span class="n">1</span> About Rosetta</h2>
-<p>Rosetta started on the Roland U-110, as a way to replace its PCM sample ROMs with your own sounds. The same idea moved to the LA-synthesis generation of Roland instruments: first the D-110, with a D-10 version in progress and other models being studied.</p>
+<p>Rosetta started on the Roland U-110: put your own sounds where the factory sounds were. Now it does the D-110 too. A D-10 version is on the way.</p>
 <div class="products">
-  <div class="prod"><b>Rosetta ROM</b>Your own samples in place of the factory waves, with their own names on the display.</div>
-  <div class="prod"><b>Rosetta OS</b>New playing features in the instrument's firmware. This manual.</div>
+  <div class="prod"><b>Rosetta ROM</b>Your own sounds in the synth.</div>
+  <div class="prod"><b>Rosetta OS</b>New stuff to play with. This manual.</div>
 </div>
 
 <h2 id="start"><span class="n">2</span> Before you start</h2>
-<div class="note"><strong>Installation note</strong>Rosetta OS v12 is a two-chip upgrade (OS chip and control chip). The OS chip has been the same since v8; moving to a newer revision only replaces the control chip. Revision v12 has passed bench simulation; v9 is the last revision confirmed on a unit.</div>
-<p>The banner shows at power-up, then the normal Play screen. All stock functions work as before, and Rosetta settings stay in memory with the power off.</p>
+<div class="note"><strong>Install note</strong>Two chips. The OS chip is the same since v8, so an update only swaps the control chip. v12 is tested in the simulator only. v9 is the last version tested on a real unit.</div>
+<p>Turn it on. You see the Rosetta screen, then the normal screen. Everything Roland made still works. Your Rosetta settings stay saved when you turn it off.</p>
 
-<h2 id="quick"><span class="n">3</span> Quick screen &amp; CC knobs</h2>
-<p>Hold <span class="key">Enter</span> and press <span class="key">Edit</span>. The Quick screen edits the sound of the current part directly, all four partials at once.</p>
+<h2 id="quick"><span class="n">3</span> Quick screen &amp; knobs</h2>
+<p>Hold <span class="key">Enter</span>, press <span class="key">Edit</span>.</p>
 <div class="lcdrow"><div class="lcd">Cut  64 Res 12P1
 Atk  20 Rel  45 </div></div>
 <div class="tbl"><table>
-<tr><th>Button</th><th>Function</th></tr>
-<tr><td><span class="key">Group ▲▼</span></td><td>Filter cutoff. Changes held notes immediately.</td></tr>
-<tr><td><span class="key">Bank ▲▼</span></td><td>Resonance. Changes held notes immediately.</td></tr>
-<tr><td><span class="key">Number ▲▼</span></td><td>Attack (from the next note)</td></tr>
-<tr><td><span class="key">Part ▲▼</span></td><td>Release (from the next note)</td></tr>
-<tr><td><span class="key">Part</span></td><td>Select the part, P1–P8</td></tr>
-<tr><td><span class="key">Edit</span></td><td>Open the Rosetta menu</td></tr>
-<tr><td><span class="key">Exit</span></td><td>Return</td></tr>
+<tr><th>Button</th><th>Does</th></tr>
+<tr><td><span class="key">Group ▲▼</span></td><td>Brighter / darker (cutoff). You hear it right away.</td></tr>
+<tr><td><span class="key">Bank ▲▼</span></td><td>More / less ring (resonance). You hear it right away.</td></tr>
+<tr><td><span class="key">Number ▲▼</span></td><td>Slower / faster start (attack). Next note.</td></tr>
+<tr><td><span class="key">Part ▲▼</span></td><td>Longer / shorter end (release). Next note.</td></tr>
+<tr><td><span class="key">Part</span></td><td>Next part, P1–P8</td></tr>
+<tr><td><span class="key">Edit</span></td><td>Rosetta menu</td></tr>
+<tr><td><span class="key">Exit</span></td><td>Back</td></tr>
 </table></div>
-<p><b>MIDI control</b> on each part's channel: CC74 cutoff, CC71 resonance, CC73 attack, CC72 release.</p>
-<p class="muted">The filter acts on synthesizer partials (square and saw). PCM partials have no filter; use level, wave and Lab functions on them instead.</p>
-<p><b>Plain labels.</b> The stock edit pages use plain words: OS, Pitch, Vibr., Flt, Flt Env, Amp, Amp Env.</p>
+<p><b>Knobs over MIDI:</b> CC74 cutoff, CC71 resonance, CC73 attack, CC72 release.</p>
+<p class="muted">Cutoff and resonance only work on synth sounds, not samples (PCM).</p>
 
-<h2 id="menu"><span class="n">4</span> The Rosetta menu</h2>
-<p>From the Quick screen press <span class="key">Edit</span>. Each line is one feature. Items marked <b>&gt;</b> open a page of their settings.</p>
+<h2 id="menu"><span class="n">4</span> The menu</h2>
+<p>Quick screen, then <span class="key">Edit</span>. One line = one feature. A <b>&gt;</b> means it has more settings inside.</p>
 <div class="lcdrow"><div class="lcd">Arp Mode       &gt;
-Up              </div><div class="lcd">Arp Rate
+Up              </div><div class="lcd">Arp Rate        
 1/16            </div></div>
 <div class="tbl"><table>
-<tr><th>Button</th><th>Function</th></tr>
-<tr><td><span class="key">Group ▲▼</span></td><td>Previous / next item</td></tr>
-<tr><td><span class="key">Bank ▲▼</span></td><td>Value −1 / +1</td></tr>
-<tr><td><span class="key">Number ▲▼</span></td><td>Value −10 / +10</td></tr>
-<tr><td><span class="key">Part</span></td><td>Part shown by per-part items</td></tr>
-<tr><td><span class="key">Edit</span></td><td>Open the page of a <b>&gt;</b> item; press again to go back</td></tr>
-<tr><td><span class="key">Exit</span></td><td>Back / leave the menu</td></tr>
+<tr><th>Button</th><th>Does</th></tr>
+<tr><td><span class="key">Group ▲▼</span></td><td>Next / previous line</td></tr>
+<tr><td><span class="key">Bank ▲▼</span></td><td>Value +1 / −1</td></tr>
+<tr><td><span class="key">Number ▲▼</span></td><td>Value +10 / −10</td></tr>
+<tr><td><span class="key">Part</span></td><td>Which part</td></tr>
+<tr><td><span class="key">Edit</span></td><td>Go inside a <b>&gt;</b> line. Again = back out.</td></tr>
+<tr><td><span class="key">Exit</span></td><td>Back</td></tr>
 </table></div>
-<p>Main items: Wave Scan · Wave Seq · Random · Vintage · Glide Time · Mono Part · Unison Voices · Chord · Mod Matrix · Arp Mode · Lab · Info.</p>
-<p class="muted">A <b>Part</b> setting chooses where a feature acts: All, or one part P1–P8. Changing how notes are played (chord, mono, unison, arpeggio, glide or vintage part) silences sounding notes first, so nothing hangs.</p>
+<p class="muted"><b>Part</b> settings: All, or one part P1–P8.</p>
 
 <h2 id="wave"><span class="n">5</span> Wave</h2>
-<h3>Wave Scan</h3>
-<p>0–127, per part, also from MIDI CC70. Moves PCM partials through the wave list while you play.</p>
-<h3>Wave Seq &gt;</h3>
-<p>Steps the PCM wave of each note through a sequence, in the style of vector and wave-sequence synthesizers. Pitch follows each wave's tuning.</p>
 <div class="tbl"><table>
-<tr><th>Parameter</th><th>Values</th></tr>
-<tr><td>Wave Seq</td><td>Off, Up 4, Up 8, Down 4, Ping 8, Octo, Strobe, Once 4, Random, User</td></tr>
-<tr><td>WSeq Speed</td><td>0–99</td></tr>
-<tr><td>WSeq Part</td><td>All, P1–P8</td></tr>
-<tr><td>WSeq User 1–8</td><td>Wave number for each step of the User pattern</td></tr>
+<tr><th>Item</th><th>Values</th><th>Does</th></tr>
+<tr><td>Wave Scan</td><td>0–127</td><td>Pick a different wave while you play. Also on CC70.</td></tr>
+<tr><td>Wave Seq &gt;</td><td>Off, Up 4, Up 8, Down 4, Ping 8, Octo, Strobe, Once 4, Random, User</td><td>Each note runs through a row of waves.</td></tr>
+<tr><td>WSeq Speed</td><td>0–99</td><td>How fast</td></tr>
+<tr><td>WSeq Part</td><td>All, P1–P8</td><td></td></tr>
+<tr><td>WSeq User 1–8</td><td>0–127</td><td>Your own row of 8 waves</td></tr>
 </table></div>
 
 <h2 id="voice"><span class="n">6</span> Random, pitch &amp; voice</h2>
 <div class="tbl"><table>
-<tr><th>Item</th><th>Values</th><th>What it does</th></tr>
-<tr><td>Drift Pitch</td><td>0–31</td><td>Each note starts slightly off pitch, like an analog voice</td></tr>
-<tr><td>Random Wave</td><td>0–127</td><td>Each note picks a nearby PCM wave</td></tr>
-<tr><td>Random Cutoff</td><td>0–100</td><td>Each note gets its own cutoff offset</td></tr>
-<tr><td>Vintage &gt;</td><td>0–99</td><td>Notes wander slowly in pitch (up to about ±28 cents) and cutoff, each its own way. Page: Vintage Part</td></tr>
-<tr><td>Glide Time &gt;</td><td>0–99</td><td>Portamento. Page: Glide Part</td></tr>
-<tr><td>Mono Part &gt;</td><td>Off, P1–P8</td><td>One part plays monophonically. Page: Legato (On = overlapping notes glide without retrigger)</td></tr>
-<tr><td>Unison Voices &gt;</td><td>1–4</td><td>Stacks detuned voices. Page: Unison Detune 0–99, Unison Part</td></tr>
+<tr><th>Item</th><th>Values</th><th>Does</th></tr>
+<tr><td>Drift Pitch</td><td>0–31</td><td>Every note a bit out of tune</td></tr>
+<tr><td>Random Wave</td><td>0–127</td><td>Every note a different wave</td></tr>
+<tr><td>Random Cutoff</td><td>0–100</td><td>Every note a different brightness</td></tr>
+<tr><td>Vintage &gt;</td><td>0–99</td><td>Old-synth wobble</td></tr>
+<tr><td>Glide Time &gt;</td><td>0–99</td><td>Notes slide into each other</td></tr>
+<tr><td>Mono Part &gt;</td><td>Off, P1–P8</td><td>One note at a time. Legato On = slide without restarting.</td></tr>
+<tr><td>Unison Voices &gt;</td><td>1–4</td><td>Stack the sound up to 4 times. Detune 0–99 = fatter.</td></tr>
 </table></div>
 <h3>Chord &gt;</h3>
-<p>One key plays a chord: Off, Octave, Fifth, 5th+Oct, Major, Minor, Sus4, Major7, Minor7, Dom7, Minor9, Dim, <b>Learned</b>, <b>Scale</b>, <b>Scale 7</b>.</p>
-<ul>
-  <li><b>Chord Learn</b> — press <span class="key">Bank ▲</span>, play up to five notes on the chord part, release. Chord switches to Learned. <span class="key">Bank ▼</span> cancels.</li>
-  <li><b>Scale Key</b> C–B and <b>Scale Type</b> (Major, Minor, Dorian, Phrygian, Lydian, Mixolydian, Locrian, Harmonic Minor, Melodic Minor): with Scale, each key plays the triad of its scale degree; Scale 7 plays the seventh chord.</li>
-  <li><b>Chord Part</b> chooses the part.</li>
-</ul>
+<p>One key = a whole chord.</p>
+<div class="tbl"><table>
+<tr><th>Item</th><th>Values</th></tr>
+<tr><td>Chord</td><td>Off, Octave, Fifth, 5th+Oct, Major, Minor, Sus4, Major7, Minor7, Dom7, Minor9, Dim, Learned, Scale, Scale 7</td></tr>
+<tr><td>Chord Part</td><td>P1–P8</td></tr>
+<tr><td>Chord Learn</td><td><span class="key">Bank ▲</span>, play a chord (up to 5 notes), let go. Done.</td></tr>
+<tr><td>Scale Key</td><td>C–B</td></tr>
+<tr><td>Scale Type</td><td>Major, Minor, Dorian, Phrygian, Lydian, Mixolydian, Locrian, HarmMin, MelMin</td></tr>
+</table></div>
+<p class="muted">Scale = every key plays the right chord for that scale. Scale 7 = same with 4 notes.</p>
 
 <h2 id="mod"><span class="n">7</span> Mod Matrix</h2>
-<p>Mod Matrix &gt; is switched On or Off as a whole. Its page holds four routings and the LFO.</p>
+<p>Connect something you do (wheel, pressure, how hard you hit) to something you hear. On / Off. 4 slots.</p>
 <div class="tbl"><table>
-<tr><th>Parameter</th><th>Values</th></tr>
-<tr><td>Mod1–4 Source</td><td>Off, ModWheel, AftTouch, Velocity, Key, LFO, S&amp;H, CC16, CC17</td></tr>
-<tr><td>Mod1–4 Dest</td><td>Cutoff, Pitch, Wave, Level, Reso</td></tr>
-<tr><td>Mod1–4 Amount</td><td>−63 to +63</td></tr>
+<tr><th>Item</th><th>Values</th></tr>
+<tr><td>Source</td><td>Off, ModWheel, AftTouch, Velocity, Key, LFO, S&amp;H, CC16, CC17</td></tr>
+<tr><td>Dest</td><td>Cutoff, Pitch, Wave, Level, Reso</td></tr>
+<tr><td>Amount</td><td>−63 to +63</td></tr>
 <tr><td>LFO Rate</td><td>0–99</td></tr>
-<tr><td>LFO Sync</td><td>Off, 4 Bars, 2 Bars, 1 Bar, 1/2, 1/4, 1/8, 1/8T, 1/16, 1/16T — locks to MIDI clock, or to the arpeggio tempo; S&amp;H steps with it</td></tr>
+<tr><td>LFO Sync</td><td>Off, 4 Bars, 2 Bars, 1 Bar, 1/2, 1/4, 1/8, 1/8T, 1/16, 1/16T</td></tr>
 <tr><td>Mod Part</td><td>All, P1–P8</td></tr>
 </table></div>
-<p class="muted">Try: Velocity → Wave for velocity layers; AftTouch → Cutoff; S&amp;H → Pitch with LFO Sync 1/16 for stepped random melodies.</p>
+<p class="muted">Try: Velocity → Wave. Hit hard, get another sound.</p>
 
-<h2 id="arp"><span class="n">8</span> Arpeggiator &amp; sequencer</h2>
+<h2 id="arp"><span class="n">8</span> Arp &amp; sequencer</h2>
+<p>Hold a chord. It plays the notes one by one.</p>
 <div class="tbl"><table>
-<tr><th>Parameter</th><th>Values</th></tr>
+<tr><th>Item</th><th>Values</th></tr>
 <tr><td>Arp Mode</td><td>Off, Up, Down, Up+Down, Random, Played, Seq</td></tr>
 <tr><td>Arp Octaves</td><td>1–4</td></tr>
 <tr><td>Arp Rate</td><td>1/4, 1/8, 1/8T, 1/16, 1/16T, 1/32</td></tr>
-<tr><td>Arp Tempo</td><td>40–240 BPM (follows MIDI clock when received; Start resets the pattern)</td></tr>
-<tr><td>Arp Gate %</td><td>5–99</td></tr>
-<tr><td>Arp Latch</td><td>Off, On</td></tr>
+<tr><td>Arp Tempo</td><td>40–240 BPM, or MIDI clock</td></tr>
+<tr><td>Arp Gate %</td><td>5–99 (short / long notes)</td></tr>
+<tr><td>Arp Latch</td><td>Off, On (keeps playing after you let go)</td></tr>
 <tr><td>Arp Part</td><td>P1–P8</td></tr>
-<tr><td>Arp MIDI Out</td><td>Off · On (also sent to MIDI OUT on the part's channel) · Only (sent out, not played)</td></tr>
+<tr><td>Arp MIDI Out</td><td>Off, On, Only (only out the MIDI cable)</td></tr>
 </table></div>
-<p>Arpeggio notes also pass through mono, chord, unison and glide.</p>
 <h3>Groove</h3>
 <div class="tbl"><table>
-<tr><th>Parameter</th><th>Values</th><th>What it does</th></tr>
-<tr><td>Chance %</td><td>0–100</td><td>Probability that each step plays</td></tr>
-<tr><td>Ratchet</td><td>Off, 2x, 3x, 4x, Random</td><td>Repeats within a step</td></tr>
-<tr><td>Octave Jump %</td><td>0–100</td><td>Random jumps up an octave</td></tr>
-<tr><td>Accent</td><td>Off, Every 2/3/4, Random</td><td>Louder steps</td></tr>
-<tr><td>Euclid Hits / Steps</td><td>1–16 / Off, 1–16</td><td>Spreads the hits evenly over the steps</td></tr>
-<tr><td>Humanize Time / Vel</td><td>0–99</td><td>Small random timing and velocity changes</td></tr>
+<tr><th>Item</th><th>Values</th><th>Does</th></tr>
+<tr><td>Chance %</td><td>0–100</td><td>Some steps skip</td></tr>
+<tr><td>Ratchet</td><td>Off, 2x, 3x, 4x, Random</td><td>Steps repeat fast</td></tr>
+<tr><td>Octave Jump %</td><td>0–100</td><td>Some steps jump up</td></tr>
+<tr><td>Accent</td><td>Off, Every 2/3/4, Random</td><td>Some steps louder</td></tr>
+<tr><td>Euclid Hits / Steps</td><td>1–16 / Off, 1–16</td><td>Rhythm patterns</td></tr>
+<tr><td>Humanize Time / Vel</td><td>0–99</td><td>Less robotic</td></tr>
 </table></div>
-<h3>Seq: the recorded pattern</h3>
-<p>Up to 32 steps of notes, rests and ties, kept in memory. Set Arp Mode to <b>Seq</b> to play it; the key you hold transposes it. A demo pattern is stored from the start. <b>Seq Length</b> sets 1–32 steps.</p>
-<p><b>Seq Record</b>, on the Arp Mode page:</p>
-<ul>
-  <li><span class="key">Bank ▲</span> — <b>Step</b> recording. Each key is one step. <span class="key">Number ▲</span> enters a rest, <span class="key">Number ▼</span> a tie.</li>
-  <li><span class="key">Bank ▲</span> again before the first key — <b>Live</b> recording. The first key starts the clock and the display changes to <b>Rec</b>; keys land on the nearest step and held keys become ties.</li>
-  <li><span class="key">Bank ▼</span> — stop. The steps so far become the pattern.</li>
-</ul>
-<div class="lcdrow"><div class="lcd">Seq Record
-Step 05/32      </div><div class="lcd">Seq Record
+<h3>Seq</h3>
+<p>Record your own pattern, up to 32 steps. Set Arp Mode to Seq. The key you hold changes the key of the pattern.</p>
+<div class="tbl"><table>
+<tr><th>Button</th><th>Does</th></tr>
+<tr><td><span class="key">Bank ▲</span></td><td>Step record: one key = one step. <span class="key">Number ▲</span> = rest, <span class="key">Number ▼</span> = tie.</td></tr>
+<tr><td><span class="key">Bank ▲</span> twice</td><td>Live record: just play.</td></tr>
+<tr><td><span class="key">Bank ▼</span></td><td>Stop. Saved.</td></tr>
+</table></div>
+<div class="lcdrow"><div class="lcd">Seq Record      
+Step 05/32      </div><div class="lcd">Seq Record      
 Done 16/32      </div></div>
-<p>The counter moves as you play, and <b>Done</b> shows when recording has stopped, either by <span class="key">Bank ▼</span> or because all 32 steps are filled.</p>
+<p class="muted">Seq Length: 1–32.</p>
 
 <h2 id="lab"><span class="n">9</span> Lab</h2>
-<p>Lab &gt; reaches into the LA sound chip directly. Results range from subtle to completely new sounds, and some settings fall silent. Lab is switched On or Off as a whole; <b>Lab Part</b> chooses the part.</p>
+<p>Break the sound chip on purpose. Weird sounds. Some settings go silent. On / Off.</p>
 <div class="tbl"><table>
-<tr><th>Parameter</th><th>Values</th><th>What it does</th></tr>
-<tr><td>Lab Reso High</td><td>Off, 0–7</td><td>Upper resonance bits. 7 gives far stronger resonance than the stock maximum</td></tr>
-<tr><td>Lab Reso Low</td><td>Off, 0–31</td><td>Lower resonance bits, including values never used by the factory sounds</td></tr>
-<tr><td>Lab Ctrl XOR</td><td>0–255</td><td>Alters synth partials. With Reso High 7, values such as 8 turn notes into airy transient sounds; every value is different</td></tr>
-<tr><td>Lab PCM XOR</td><td>0–255</td><td>The same for PCM partials</td></tr>
-<tr><td>Lab PCM Pos</td><td>0–255</td><td>Shifts where a PCM partial reads its sample: other waves, other regions of memory</td></tr>
+<tr><th>Item</th><th>Values</th><th>Does</th></tr>
+<tr><td>Lab Reso High</td><td>Off, 0–7</td><td>7 = way more resonance than normal</td></tr>
+<tr><td>Lab Reso Low</td><td>Off, 0–31</td><td>More resonance flavors</td></tr>
+<tr><td>Lab Ctrl XOR</td><td>0–255</td><td>Bends synth sounds. With Reso High 7: wind and noise.</td></tr>
+<tr><td>Lab PCM XOR</td><td>0–255</td><td>Bends samples</td></tr>
+<tr><td>Lab PCM Pos</td><td>0–255</td><td>Samples play from the wrong place. 256 new sounds.</td></tr>
+<tr><td>Lab Part</td><td>All, P1–P8</td><td></td></tr>
 </table></div>
 <h3>Lab Motion</h3>
-<p>Changes a Lab value automatically, so one held key moves through hundreds of sounds.</p>
+<p>Changes the Lab value by itself. Hold one key, hear it morph.</p>
 <div class="tbl"><table>
-<tr><th>Parameter</th><th>Values</th></tr>
+<tr><th>Item</th><th>Values</th></tr>
 <tr><td>Motion</td><td>Off, Up, Down, Ping, Random</td></tr>
 <tr><td>Motion Dest</td><td>PCM Pos, Ctrl XOR, PCM XOR, All</td></tr>
-<tr><td>Motion Rate</td><td>Note (each new note), 1/1, 1/2, 1/4, 1/8, 1/8T, 1/16, 1/16T, 1/32, 1/64 — tempo or MIDI clock</td></tr>
+<tr><td>Motion Rate</td><td>Note, 1/1, 1/2, 1/4, 1/8, 1/8T, 1/16, 1/16T, 1/32, 1/64</td></tr>
 <tr><td>Motion Range</td><td>1–255</td></tr>
 <tr><td>Motion Step</td><td>1–64</td></tr>
-<tr><td>Retrigger</td><td>Off, On — each step plays the held notes again, as a stutter</td></tr>
+<tr><td>Retrigger</td><td>Off, On (plays the note again each step)</td></tr>
 </table></div>
 
-<h2 id="info"><span class="n">10</span> Info &amp; troubleshooting</h2>
-<div class="lcdrow"><div class="lcd">Info
+<h2 id="info"><span class="n">10</span> Info &amp; help</h2>
+<div class="lcdrow"><div class="lcd">Info            
 Mem oooo P01 v12</div></div>
-<p><b>Info</b> tests the memory Rosetta uses (<b>o</b> = good, <b>X</b> = fault), and shows the current part and the revision.</p>
+<p>o = memory OK. X = problem. Then the part and the version.</p>
 <div class="tbl"><table>
-<tr><th>Symptom</th><th>Remedy</th></tr>
-<tr><td>Banner reads “D-110 ROSETTA”, menu has no effect</td><td>The control chip upgrade is not detected. Have the installation checked.</td></tr>
-<tr><td>Notes keep sounding</td><td>Exit the menu and select the patch again, or send All Notes Off.</td></tr>
-<tr><td>Filter has no effect</td><td>The partial is PCM; PCM partials have no filter.</td></tr>
-<tr><td>A Lab sound went silent</td><td>Set the Lab values back to 0 / Off, or switch Lab Off.</td></tr>
-<tr><td>Settings changed after an update</td><td>A new revision may reset settings to their defaults. Set them again.</td></tr>
-<tr><td>Internal tempo slightly off</td><td>Use MIDI clock; synced timing is exact.</td></tr>
+<tr><th>Problem</th><th>Fix</th></tr>
+<tr><td>Screen says “D-110 ROSETTA”, menu does nothing</td><td>Control chip not found. Check the install.</td></tr>
+<tr><td>Notes keep playing</td><td>Exit and pick the patch again.</td></tr>
+<tr><td>Cutoff does nothing</td><td>It's a sample sound. No filter on samples.</td></tr>
+<tr><td>Lab went silent</td><td>Lab Off.</td></tr>
+<tr><td>Settings gone after update</td><td>Set them again.</td></tr>
+<tr><td>Tempo a bit off</td><td>Use MIDI clock.</td></tr>
 </table></div>
 
-<footer>Rosetta OS v12 · Roland and D-110 are trademarks of their owners. This upgrade is not made or endorsed by Roland. Share the Rosetta project, not firmware files.</footer>
+<footer>Rosetta OS v12 · Roland and D-110 are trademarks of their owners. Not made by Roland.</footer>
 </div>
