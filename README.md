@@ -12,6 +12,8 @@ The sample side (your own waves in IC7 / IC8 / IC15) lives in [Rosetta ROM](http
 **Legal:** this repo contains no Roland code or ROM data. You read **your own** chips, the tools add the new bytes
 to your dumps. Please don't share patched / baked .bin files: share this repo instead.
 
+**Using it:** [`USER_GUIDE.md`](USER_GUIDE.md).
+
 **Working on the OS with an AI model (or by hand)?** Start with [`how-to-reverse-engineer/`](how-to-reverse-engineer/README.md).
 
 **Quick start:** dumps into `roms/`, then `python bake_rosetta.py --test` -> burn files in `baked/` (see below).
