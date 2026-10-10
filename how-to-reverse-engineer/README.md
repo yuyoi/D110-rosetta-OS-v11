@@ -30,7 +30,7 @@ The big reference files are in the repo root: `IC19_MAP.md` (OS ROM map, everyth
 ## Where things stand (2026-10-08)
 - D-110 OS v1.10 (IC19): ~24 KB of 32 KB traced; UI menu system, MIDI input, SysEx map, I/O, LA32 access decoded.
 - IC15 (control ROM) fully mapped; the demo song area hosts new code (page 0x27).
-- Rosetta v12: ~15 KB of new code/data in IC15 + ~300 B of hooks in IC19. v9 confirmed on hardware; v10-v12
-  simulator only.
+- Rosetta v12: ~15 KB of new code/data in IC15 + ~300 B of hooks in IC19. v9 and v12 confirmed on hardware
+  (v12: boots and works, no feature-by-feature report yet).
 - D-10: not started (same CPU board family; the D-110 ROM even contains "Roland D-10" ID strings).
 - GR-50: not started; nothing verified yet.

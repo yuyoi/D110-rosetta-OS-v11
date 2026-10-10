@@ -28,8 +28,8 @@ Studio (or your plain IC15 dump) in `roms/IC15 (bin from Rosetta Studio here)/`,
 **v8 on hardware (user test):** boots, the Info line reads `Mem oooo P01 v8` (all RAM spots ok), the Lab items work
 (see Lab). The rest of v8 (arp, unison, glide, LFO, wave seq, saved settings) is not reported yet.
 **v9 on hardware:** user: "it all looks great and seems to work well" (no feature-by-feature report yet).
-**v10 (menu layout, banner, Mod / Lab On-Off), v11 (Lab Motion) and v12 (Seq Record live counter + Done) are
-simulator-only.** They keep the v9 settings and sequence (v11 adds its own defaults). v11 backup: git tag
+**v10 (menu layout, banner, Mod / Lab On-Off), v11 (Lab Motion) and v12 (Seq Record live counter + Done) were
+simulator-only; **v12 boots and works on hardware (user, 2026-10-10)**, feature-by-feature report pending.** They keep the v9 settings and sequence (v11 adds its own defaults). v11 backup: git tag
 `rosetta-v11`.
 v6 plus new features whose code lives in IC15 page 0x27: code at IC15 0x1C000-0x1EFFF (the end of the demo songs,
 unused once the Quick mod has replaced the demo menu), the jump table at 0x1F000 and data after it (0x1F020-0x1FFFF).

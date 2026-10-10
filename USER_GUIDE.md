@@ -1,7 +1,7 @@
 # Rosetta OS v12 for the Roland D-110: user guide
 
-> **Status:** v12 has passed all simulator checks but is **not yet confirmed on hardware**. The last version
-> confirmed on a real unit is v9. Keep your v9/v11 chips or files as a fallback.
+> **Status:** v12 boots and works on a real unit (user report, 2026-10-10; no feature-by-feature report yet).
+> Keep your v9/v11 chips or files as a fallback.
 
 Before you touch any chip, **power off and unplug** the unit.
 
