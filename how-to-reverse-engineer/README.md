@@ -17,6 +17,7 @@ which tools exist, the rules, and the mistakes that already cost hardware test r
 | `PORT_D10.md` | plan for porting to the D-10 (and other LA family units) |
 | `GR50.md` | what is known / unknown about the GR-50 and how to start on it |
 | `HARDWARE.md` | chips, adapters, wiring, burning |
+| `IC15_MODULE.md` | drop-in IC15 module: DIP-28 carrier with an SST39SF040, pin table, 4-bank option |
 
 The big reference files are in the repo root: `IC19_MAP.md` (OS ROM map, everything verified so far),
 `IC12_MAP.md` (control ROM map + IC15 wiring), `rosetta.py` (the mod source, heavily commented).
