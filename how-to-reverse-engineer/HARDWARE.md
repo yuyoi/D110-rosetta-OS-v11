@@ -22,6 +22,23 @@ notch end). Then:
   GND 14, D3 15, D4 16, D5 17, D6 18, D7 19, /OE 20, A10 21, A16 22, A11 23, A9 24, A8 25, A13 26, A14 27, Vcc 28.
   A plain 27C256 profile cannot read it without an adapter (A16 on pin 22, /OE on pin 20).
 
+### IC15 alternative: a "27C301-type" 32-pin EPROM, no lifted pins (UV / OTP)
+No 28-pin programmable 1 Mbit chip exists (the mask-ROM pinout has no pin free for VPP or WE). But one family of
+32-pin EPROMs was made as a replacement for this 28-pin socket: the non-JEDEC "27C301 / 27C1000" layout with A16
+on pin 24 and /OE on pin 2. Members: **Hitachi HN27C301** (G = UV window, P/AP = OTP), **Toshiba TC571000**,
+**NEC uPD27C1000**, **Mitsubishi M5M27C100** (K = UV, P = OTP), **Fujitsu MBM27C1000** (-Z = UV, P = OTP),
+**Macronix MX27C1001** (Macronix naming is reversed: MX27C1000 is the JEDEC one), **Intel 27C100 / 27011**. NOS and
+pulls only (eBay, UTSource); all are in the XGecu T48 list under their own names. Not electrically erasable.
+- Seat the chip hanging **2 pins over the notch end**: chip pins 3-30 into socket pins 1-28. Every address, data,
+  GND and /CE pin then lands right (chip 22 /CE -> socket 20, chip 24 A16 -> socket 22), and chip pin 30 (NC) sits
+  on socket Vcc harmlessly.
+- The 4 overhanging pins get wires, nothing is lifted or cut: **pin 32 (Vcc), pin 1 (VPP), pin 31 (/PGM) -> +5 V**
+  (shortest: to chip pin 30, which is in the Vcc socket pin); **pin 2 (/OE) -> GND** (to chip pin 16 / socket 14).
+  Without the pin 32 wire the chip is unpowered; without the pin 2 wire its outputs never turn on.
+- Cleaner: put the wires on a **32-pin turned-pin socket** instead (its pins 3-30 go into the IC15 socket, straps
+  1/31/32 -> 30 and 2 -> 16 soldered on the socket). Then EPROMs plug in and out normally.
+- Burn the 128 KB file (`D110_IC15_Rosetta-vN_128K.bin`). 120-200 ns parts are fine. Not yet tried on a D-110.
+
 ## IC7 / IC8: PCM ROMs HN62304B (32-pin, 27C040 pinout) - only for custom samples
 - Read with the T48 profile AM27C040@DIP32.
 - SST39SF040 in their place: board pin 31 (A18) -> SST pin 1; SST pin 31 (WE#) -> Vcc (2-wire adapter).
