@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Roland D-110 Mods: Rosetta OS custom firmware + custom samples</title>
+<meta name="description" content="Roland D-110 (D110) mods by Rosetta: a custom OS with arpeggiator, step sequencer, MIDI out, MIDI CC knobs, wave sequencing and mod matrix, plus custom samples in the wave ROMs. Tested on real hardware, free and open source.">
+<meta name="keywords" content="Roland D-110, D110, D-110 mod, D110 mod, D-110 firmware, D-110 custom OS, D-110 custom samples, LA synthesis, LA32, MT-32, synth mod">
+<link rel="canonical" href="https://yuyoi.github.io/D110-rosetta-OS-v11/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Roland D-110 Mods: Rosetta OS + custom samples">
+<meta property="og:description" content="New firmware and your own samples for the Roland D-110. Arp, sequencer, MIDI CC, wave sequencing. Tested on real hardware.">
+<meta property="og:url" content="https://yuyoi.github.io/D110-rosetta-OS-v11/">
+<meta property="og:image" content="https://yuyoi.github.io/D110-rosetta-OS-v11/img/studio_main.png">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"D-110 Rosetta OS","applicationCategory":"MultimediaApplication","operatingSystem":"Roland D-110 (OS v1.10), Windows/Python for the tools","description":"Custom firmware and custom samples mod for the Roland D-110 LA synthesizer module.","url":"https://yuyoi.github.io/D110-rosetta-OS-v11/","license":"https://opensource.org/licenses/MIT","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+</script>
+<style>
+:root{--bg:#f6f6f3;--paper:#fff;--fg:#17181a;--muted:#5c5f63;--rule:#d6d7d2;--bar:#17181a;--bar-fg:#f6f6f3;--accent:#d2461e;--lcd:#b9c94a;--lcd-ink:#28300e}
+@media (prefers-color-scheme:dark){:root{--bg:#121314;--paper:#1b1c1e;--fg:#ececea;--muted:#a3a6aa;--rule:#2e3033;--bar:#ececea;--bar-fg:#121314}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 "Helvetica Neue",Arial,sans-serif}
+.wrap{max-width:920px;margin:0 auto;padding:0 16px}
+header{padding:40px 0 24px;text-align:center}
+header img{width:260px;max-width:70%}
+h1{font-size:2rem;line-height:1.2;margin:16px 0 8px}
+.lede{color:var(--muted);font-size:1.1rem;margin:0 auto;max-width:640px}
+.lcd{display:inline-block;margin:20px 0 0;background:var(--lcd);color:var(--lcd-ink);font:600 1.1rem/1.3 "Courier New",monospace;padding:10px 16px;border-radius:4px;letter-spacing:.06em}
+.cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:24px 0 8px}
+.btn{display:inline-block;padding:12px 18px;border-radius:6px;background:var(--accent);color:#fff;text-decoration:none;font-weight:700}
+.btn.alt{background:transparent;color:var(--fg);border:2px solid var(--fg)}
+h2{background:var(--bar);color:var(--bar-fg);font-size:1rem;letter-spacing:.08em;text-transform:uppercase;padding:8px 12px;margin:40px 0 16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.card{background:var(--paper);border:1px solid var(--rule);border-radius:6px;padding:14px 16px}
+.card b{display:block;margin-bottom:4px}
+.card span{color:var(--muted);font-size:.95rem}
+figure{margin:16px 0;text-align:center}
+figure img{max-width:100%;border:1px solid var(--rule);border-radius:4px}
+figcaption{color:var(--muted);font-size:.9rem;margin-top:6px}
+ol li{margin:6px 0}
+footer{color:var(--muted);font-size:.9rem;padding:40px 0;border-top:1px solid var(--rule);margin-top:40px}
+a{color:var(--accent)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<img src="img/logo.png" alt="Rosetta">
+<h1>Roland D-110 Mods: Rosetta OS + custom samples</h1>
+<p class="lede">New firmware and your own sounds for the Roland D-110 (D110) LA synth module. Free, open source, and tested on a real D-110.</p>
+<div class="lcd">ROSETTA OS  v12</div>
+<div class="cta">
+<a class="btn" href="https://github.com/yuyoi/D110-rosetta-OS-v11">Rosetta OS on GitHub</a>
+<a class="btn alt" href="https://github.com/yuyoi/Rompler-RosettaRom">Custom samples (Rosetta ROM)</a>
+<a class="btn alt" href="rosetta-manual.html">Owner's manual</a>
+</div>
+</header>
+
+<h2>What the OS mod adds</h2>
+<div class="grid">
+<div class="card"><b>Arpeggiator</b><span>Up, down, random, played, Euclid patterns, ratchets, latch. Syncs to MIDI clock.</span></div>
+<div class="card"><b>Step sequencer</b><span>Up to 32 steps, step or live recording, transposed by the key you hold.</span></div>
+<div class="card"><b>MIDI out + MIDI CC knobs</b><span>Arp notes go out over MIDI. CC74/71/73/72 control cutoff, resonance, attack and release live.</span></div>
+<div class="card"><b>Wave sequencing</b><span>Wavestation-style: each note steps through PCM waves. Wave Scan on CC70, random wave per note.</span></div>
+<div class="card"><b>Mod matrix</b><span>4 slots: mod wheel, aftertouch, velocity, LFO, S&amp;H to cutoff, pitch, wave, level.</span></div>
+<div class="card"><b>Unison, mono, glide, chords</b><span>Up to 4-voice unison, legato, glide, Chord Learn and scale chords.</span></div>
+<div class="card"><b>Vintage drift</b><span>Every note drifts in pitch and cutoff on its own, like an old analog.</span></div>
+<div class="card"><b>Lab</b><span>Resonance past the stock maximum and LA32 tricks Roland never let out.</span></div>
+</div>
+<p>All of it runs from a new menu on the front panel. Every feature above is confirmed on hardware.</p>
+
+<h2>Custom samples</h2>
+<p>With <a href="https://github.com/yuyoi/Rompler-RosettaRom">Rosetta ROM</a> the D-110's wave ROMs are swapped for flash chips, so it plays your own sounds. You record on your PC, burn the chips, and play. The D-110 doesn't record by itself, but your samples sit where the factory waves were.</p>
+<figure><img src="img/studio_main.png" alt="Rosetta ROM Studio wave editor" loading="lazy"><figcaption>Rosetta ROM Studio: pick a wave, load a WAV, set the root note and loop, build the ROM images.</figcaption></figure>
+<figure><img src="img/studio_patch_os.png" alt="Rosetta ROM Studio Patch OS window" loading="lazy"><figcaption>Patch OS: your own dump in, pick the patches, see every byte it changes.</figcaption></figure>
+
+<h2>How it works</h2>
+<ol>
+<li>Read your own chips (IC19 OS EPROM, IC15 control ROM) on a programmer such as a T48. Keep the originals.</li>
+<li>Run the bake tool. It patches your dumps and writes the burn files.</li>
+<li>Burn and fit the chips. Put the originals back and it's a stock D-110 again.</li>
+</ol>
+<p><b>Quick mod:</b> one socketed chip (IC19) gives the live filter screen, the CC knobs and plain-word menus. <b>Full Rosetta</b> adds IC15 for everything else.</p>
+
+<h2>Community</h2>
+<p>Questions, hardware reports and ideas: <a href="https://discord.gg/R3CQkFdRtf">join the Discord</a>. More Rosetta OS mods: <a href="https://github.com/yuyoi/Sp-808-rosetta-looper-OS-">SP-808</a>, <a href="https://github.com/yuyoi/Akai-S2000-Rosetta-OS">Akai S2000</a>, <a href="https://github.com/yuyoi/super-Gp-16-Rosetta-OS">GP-16</a>, <a href="https://github.com/yuyoi/u110-romhex-studio">U-110</a>.</p>
+
+<footer>Made by JunkSmithWizard (JSW) together with Claude (Anthropic's AI). No Roland code or ROM data is included: the tools patch your own dumps. Roland and D-110 are names of Roland Corporation, used only to say what this works with. MIT licence.</footer>
+</div>
+</body>
+</html>
