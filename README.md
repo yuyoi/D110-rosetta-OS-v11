@@ -1,9 +1,10 @@
 <p align="center"><img src="assets/logo.png" width="360" alt="Rosetta"></p>
 
-# D-110 Rosetta OS: the Roland D-110 mod (custom firmware + sampler)
+# D-110 Rosetta OS: the Roland D-110 mod (custom firmware + custom samples)
 
 **Roland D-110 mod / custom OS / firmware upgrade**, tested on real hardware. Pair it with
-[Rosetta ROM](https://github.com/yuyoi/Rompler-RosettaRom) to turn the D-110 into a sampler with your own waves.
+[Rosetta ROM](https://github.com/yuyoi/Rompler-RosettaRom) to load your own sounds into the wave ROMs: record on your
+PC, burn, play.
 
 > *"You can't teach an old dog new tricks, but you can feed it only crack and steroids for a week."*
 
